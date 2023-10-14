@@ -46,19 +46,21 @@ from mmdet.apis import DetInferencer
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument(
-        'inputs', type=str, help='Input image file or folder path.')
+        '--inputs', type=str, help='Input image file or folder path.', default='../demo/demo.jpg')
     parser.add_argument(
-        'model',
+        '--model',
         type=str,
         help='Config or checkpoint .pth file or the model name '
-        'and alias defined in metafile. The model configuration '
-        'file will try to read from .pth if the parameter is '
-        'a .pth weights file.')
-    parser.add_argument('--weights', default=None, help='Checkpoint file')
+             'and alias defined in metafile. The model configuration '
+             'file will try to read from .pth if the parameter is '
+             'a .pth weights file.',
+        default='../rtmdet_tiny_8xb32-300e_coco.py')
+    parser.add_argument('--weights', default='../rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth',
+                        help='Checkpoint file')
     parser.add_argument(
         '--out-dir',
         type=str,
-        default='outputs',
+        default='../outputs',
         help='Output directory of images or prediction results.')
     parser.add_argument('--texts', help='text prompt')
     parser.add_argument(
@@ -97,8 +99,8 @@ def parse_args():
         '-c',
         action='store_true',
         help='Whether to customize entity names? '
-        'If so, the input text should be '
-        '"cls_name1 . cls_name2 . cls_name3 ." format')
+             'If so, the input text should be '
+             '"cls_name1 . cls_name2 . cls_name3 ." format')
 
     call_args = vars(parser.parse_args())
 
@@ -134,3 +136,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
