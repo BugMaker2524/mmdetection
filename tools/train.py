@@ -12,7 +12,11 @@ from mmdet.utils import setup_cache_size_limit_of_dynamo
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')
-    parser.add_argument('config', help='train config file path')
+    parser.add_argument('--config',
+                        default='../configs/defect_det/ld_r50-gflv1-r101_fpn_1x_coco.py',
+                        help='train config file path')
+    parser.add_argument(
+        '--device', default='cuda:0', help='Device used for inference')
     parser.add_argument('--work-dir', help='the dir to save logs and models')
     parser.add_argument(
         '--amp',
