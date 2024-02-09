@@ -97,7 +97,7 @@ val_evaluator = dict(
 )
 test_evaluator = val_evaluator
 
-max_epochs = 24
+max_epochs = 12
 load_from = '/home/yx/mmdetection/checkpoints/ld_r50_gflv1_r101_fpn_coco_1x_20220629_145355-8dc5bad8.pth'
 default_hooks = dict(
     checkpoint=dict(

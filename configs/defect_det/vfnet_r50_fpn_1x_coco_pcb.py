@@ -116,7 +116,7 @@ val_evaluator = dict(
 test_evaluator = val_evaluator
 
 # learning rate
-max_epochs = 24
+max_epochs = 12
 param_scheduler = [
     dict(type='LinearLR', start_factor=0.1, by_epoch=False, begin=0, end=500),
     dict(
