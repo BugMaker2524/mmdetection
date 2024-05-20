@@ -56,7 +56,7 @@ val_evaluator = dict(
 )
 test_evaluator = val_evaluator
 
-load_from = '/home/yx/mmdetection/checkpoints/atss_r50_fpn_1x_coco_20200209-985f7bd0.pth'
+load_from = '/home/yx/mmdetection/checkpoints/yolov3_d53_320_273e_coco-421362b6.pth'
 default_hooks = dict(
     checkpoint=dict(
         type='CheckpointHook',
