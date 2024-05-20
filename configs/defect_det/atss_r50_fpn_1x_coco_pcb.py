@@ -67,6 +67,10 @@ model = dict(
         nms=dict(type='nms', iou_threshold=0.6),
         max_per_img=100))
 
+# optimizer
+optim_wrapper = dict(
+    optimizer=dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0001))
+
 data_root = '/mnt/data/yx/defectdet/PCB/'
 metainfo = {
     'classes': ("missing_hole", "mouse_bite", "open_circuit", "short", "spur", "spurious_copper"),
@@ -93,10 +97,6 @@ val_evaluator = dict(
     ann_file=data_root + 'annotations/instances_val.json'
 )
 test_evaluator = val_evaluator
-
-# optimizer
-optim_wrapper = dict(
-    optimizer=dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0001))
 
 load_from = '/home/yx/mmdetection/checkpoints/atss_r50_fpn_1x_coco_20200209-985f7bd0.pth'
 default_hooks = dict(

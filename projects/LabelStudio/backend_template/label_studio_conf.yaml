@@ -1,0 +1,3 @@
+config_file: "/home/yx/mmdetection/configs/defect_det/atss_r50_fpn_1x_coco_pcb.py"
+checkpoint_file: "/home/yx/mmdetection/tools/work_dirs/atss_r50_fpn_1x_coco_pcb/epoch_12.pth"
+device: "cpu"

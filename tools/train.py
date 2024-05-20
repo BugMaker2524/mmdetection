@@ -2,7 +2,7 @@
 import argparse
 import os
 import os.path as osp
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2'
 
 from mmengine.config import Config, DictAction
 from mmengine.registry import RUNNERS
@@ -14,7 +14,7 @@ from mmdet.utils import setup_cache_size_limit_of_dynamo
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')
     parser.add_argument('--config',
-                        default='../configs/defect_det/ld_r50-gflv1-r101_fpn_1x_coco_neu.py',
+                        default='../configs/defect_det/tridentnet_r50-caffe_1x_coco_neu.py',
                         help='train config file path')
     parser.add_argument(
         '--device', default='cuda:0', help='Device used for inference')
@@ -123,4 +123,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # for i in range(10000):
+        main()

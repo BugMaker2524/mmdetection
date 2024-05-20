@@ -19,7 +19,7 @@ print('=> LABEL STUDIO HOSTNAME = ', HOSTNAME)
 if not API_KEY:
     print('=> WARNING! API_KEY is not set')
 
-with open(os.path.join(ROOT, "label_studio_conf.yaml"), errors='ignore') as f:
+with open(os.path.join(ROOT, "projects/LabelStudio/backend_template/label_studio_conf.yaml"), errors='ignore') as f:
     conf = yaml.safe_load(f)
 
 register_all_modules()
