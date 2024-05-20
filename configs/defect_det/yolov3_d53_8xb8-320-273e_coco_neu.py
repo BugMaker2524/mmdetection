@@ -1,5 +1,7 @@
 _base_ = '../yolo/yolov3_d53_8xb8-ms-608-273e_coco.py'
 
+model = dict(bbox_head=dict(num_classes=6))
+
 input_size = (320, 320)
 train_pipeline = [
     dict(type='LoadImageFromFile', backend_args={{_base_.backend_args}}),

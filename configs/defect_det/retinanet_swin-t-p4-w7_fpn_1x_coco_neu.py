@@ -25,7 +25,8 @@ model = dict(
         with_cp=False,
         convert_weights=True,
         init_cfg=dict(type='Pretrained', checkpoint=pretrained)),
-    neck=dict(in_channels=[192, 384, 768], start_level=0, num_outs=5))
+    neck=dict(in_channels=[192, 384, 768], start_level=0, num_outs=5),
+    bbox_head=dict(num_classes=6))
 
 # optimizer
 optim_wrapper = dict(optimizer=dict(lr=0.01))
