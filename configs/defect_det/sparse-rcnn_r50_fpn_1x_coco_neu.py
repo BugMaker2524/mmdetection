@@ -105,7 +105,7 @@ metainfo = {
     'classes': ("crazing", "patches", "inclusion", "pitted_surface", "rolled-in_scale", "scratches"),
 }
 train_dataloader = dict(
-    batch_size=16,
+    batch_size=8,
     num_workers=2,
     dataset=dict(
         data_root=data_root,

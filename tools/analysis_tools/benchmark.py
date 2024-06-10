@@ -19,12 +19,12 @@ def parse_args():
     parser.add_argument(
         '--task',
         choices=['inference', 'dataloader', 'dataset'],
-        default='dataloader',
+        default='inference',
         help='Which task do you want to go to benchmark')
     parser.add_argument(
         '--repeat-num',
         type=int,
-        default=1,
+        default=5,
         help='number of repeat times of measurement for averaging the results')
     parser.add_argument(
         '--max-iter', type=int, default=2000, help='num of max iter')
@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument(
         '--dataset-type',
         choices=['train', 'val', 'test'],
-        default='test',
+        default='train',
         help='Benchmark dataset type. only supports train, val and test')
     parser.add_argument(
         '--work-dir',

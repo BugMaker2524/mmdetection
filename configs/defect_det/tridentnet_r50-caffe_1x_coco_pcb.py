@@ -26,7 +26,7 @@ metainfo = {
     'classes': ("missing_hole", "mouse_bite", "open_circuit", "short", "spur", "spurious_copper"),
 }
 train_dataloader = dict(
-    batch_size=8,
+    batch_size=4,
     dataset=dict(
         data_root=data_root,
         metainfo=metainfo,

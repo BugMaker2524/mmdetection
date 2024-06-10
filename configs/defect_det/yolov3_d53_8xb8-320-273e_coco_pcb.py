@@ -32,7 +32,7 @@ metainfo = {
     'classes': ("missing_hole", "mouse_bite", "open_circuit", "short", "spur", "spurious_copper"),
 }
 train_dataloader = dict(
-    batch_size=16,
+    batch_size=64,
     num_workers=2,
     dataset=dict(
         pipeline=train_pipeline,
